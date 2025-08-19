@@ -1,0 +1,214 @@
+/* =========================
+   Variáveis de cores
+========================= */
+:root {
+    --preto: #000000;
+    --amarelo: #e4d26e;
+    --azul-claro: #B0E0E6;
+    --cinza-escuro: #333333;
+    --cinza-claro: #f5f5f5;
+    --branco: #FFFFFF;
+    --fonte-principal: 'Arial', sans-serif;
+}
+
+/* =========================
+   Reset e base
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cinza-claro);
+    color: var(--preto);
+    line-height: 1.6;
+    text-align: left; /* textos justificados */
+}
+
+p {
+    text-align: left;
+}
+
+
+a {
+    color: var(--preto);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--amarelo);
+}
+
+/* =========================
+   Header e Navegação
+========================= */
+header {
+    background-color: var(--amarelo);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* =========================
+   Seções
+========================= */
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--branco);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    /* borda azul atrás da seção */
+    border: 4px solid var(--azul-claro);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   Títulos
+========================= */
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: var(--preto);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* =========================
+   Vídeos em Libras
+========================= */
+video {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border: 2px solid var(--amarelo);
+    border-radius: 10px;
+}
+
+/* =========================
+   Cards de diretores e equipe
+========================= */
+.card-diretor, .membro, .parceria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 15px;
+    background-color: var(--cinza-claro);
+    border: 2px solid var(--amarelo);
+    border-radius: 15px;
+    max-width: 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card-diretor:hover, .membro:hover, .parceria:hover {
+    transform: translateY(-5px);
+}
+
+.card-diretor img, .membro img, .parceria img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Container flexível para múltiplos cards */
+section#responsaveis, section#parcerias, section#equipe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* =========================
+   Contato
+========================= */
+#contato, #contato-audiotrap {
+    text-align: center;
+}
+
+#contato p, #contato-audiotrap p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* =========================
+   Notícias
+========================= */
+.noticia {
+    background-color: var(--cinza-claro);
+    border: 2px solid var(--azul-claro);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#instagram-feed {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cinza-claro);
+    border: 2px solid var(--azul-claro);
+    border-radius: 15px;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+    background-color: var(--amarelo);
+    color: var(--preto);
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* =========================
+   Responsividade
+========================= */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    section#responsaveis, section#parcerias, section#equipe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-diretor, .membro, .parceria {
+        max-width: 90%;
+    }
+}
