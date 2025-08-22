@@ -72,6 +72,48 @@ nav ul li a {
     padding: 5px 10px;
 }
 
+/* Botão do menu */
+#menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--preto);
+    cursor: pointer;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Esconde menu por padrão */
+        flex-direction: column;
+        background-color: var(--amarelo);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 999;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex; /* Mostra quando ativado */
+    }
+
+    #menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+}
+
 /* =========================
    Seções
 ========================= */

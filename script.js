@@ -16,6 +16,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ==============================
+// Toggle do menu mobile
+// ==============================
+const menuToggle = document.getElementById('menu-toggle');
+if (menuToggle) {
+    menuToggle.addEventListener('click', function () {
+        const navMenu = document.querySelector('nav ul');
+        navMenu.classList.toggle('show');
+    });
+}
+
+// ==============================
 // Exemplo de função para carregar feed do Instagram
 // ==============================
 // OBS: É necessário usar API do Instagram ou widget de terceiros.
